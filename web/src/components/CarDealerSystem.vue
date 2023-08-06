@@ -1,6 +1,6 @@
 <template class="template">
     <div class="main-container">
-        <div  v-if="show">
+        <div v-if="show">
             <HeaderComponent :title="title" :accountBalance="balance" />
             <div>
                 <TabListComponet :tabs="['Catalogue', 'Order Details']">

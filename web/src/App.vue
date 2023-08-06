@@ -7,18 +7,18 @@ import CarDealerSystem from "./components/CarDealerSystem.vue";
 import { onMounted, ref } from 'vue';
 import axios from 'axios';
 
-const show = ref(false);
-const balance = ref(1000000);
+const show = ref(true);
+const balance = ref(500000);
 const title = ref("Mandarin Motors");
 const products = ref([
-  { name: 'Jester - S Class', img: './img/cars/vehicle.png', owner_buy_price: 345000, max_price: 375000, stockCount: 0 },
-  { name: 'Komoda - S Class', img: './img/cars/vehicle.png', owner_buy_price: 345000, max_price: 375000, stockCount: 2 },
-  { name: 'Sultan RS - S Class', img: './img/cars/vehicle.png', owner_buy_price: 345000, max_price: 375000, stockCount: 5 },
-  { name: 'Sunrise R - S Class', img: './img/cars/vehicle.png', owner_buy_price: 360000, max_price: 400000, stockCount: 3 },
-  { name: 'Penumbra FF - A Class', img: './img/cars/vehicle.png', owner_buy_price: 150000, max_price: 250000, stockCount: 0 },
-  { name: 'Previon - A Class', img: './img/cars/vehicle.png', owner_buy_price: 155000, max_price: 250000, stockCount: 1 },
-  { name: 'Banshee - S Class', img: './img/cars/vehicle.png', owner_buy_price: 345000, max_price: 375000, stockCount: 0 },
-  { name: 'Futo GTX Widebody - Drift King Class', img: './img/cars/vehicle.png', owner_buy_price: 200000, max_price: 275000, stockCount: 3 },
+  { name: 'Jester - S Class', img: './img/cars/vehicle.png', owner_buy_price: 345000, max_price: 375000, stock: 0 },
+  { name: 'Komoda - S Class', img: './img/cars/vehicle.png', owner_buy_price: 345000, max_price: 375000, stock: 2 },
+  { name: 'Sultan RS - S Class', img: './img/cars/vehicle.png', owner_buy_price: 345000, max_price: 375000, stock: 5 },
+  { name: 'Sunrise R - S Class', img: './img/cars/vehicle.png', owner_buy_price: 360000, max_price: 400000, stock: 3 },
+  { name: 'Penumbra FF - A Class', img: './img/cars/vehicle.png', owner_buy_price: 150000, max_price: 250000, stock: 0 },
+  { name: 'Previon - A Class', img: './img/cars/vehicle.png', owner_buy_price: 155000, max_price: 250000, stock: 1 },
+  { name: 'Banshee - S Class', img: './img/cars/vehicle.png', owner_buy_price: 345000, max_price: 375000, stock: 0 },
+  { name: 'Futo GTX Widebody - Drift King Class', img: './img/cars/vehicle.png', owner_buy_price: 200000, max_price: 275000, stock: 3 },
 ]);
 const orderedVehicles = ref({
     pdm: {
